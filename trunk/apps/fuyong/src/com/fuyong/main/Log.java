@@ -1,7 +1,6 @@
 package com.fuyong.main;
 
 import org.apache.log4j.*;
-import org.apache.log4j.spi.LoggerRepository;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -16,7 +15,8 @@ import java.util.Date;
  */
 public class Log extends Logger {
     public static final String MY_APP = "MyApp";
-    public static final String ERROR = "error";
+    public static final String CRASH = "crash_report";
+    private String name;
 
     protected Log(String name) {
         super(name);
@@ -25,17 +25,18 @@ public class Log extends Logger {
     public static void init() {
         LogManager.getLoggerRepository().resetConfiguration();
         initMyAppLog();
-        initErrorLog();
+        initCrashLog();
     }
 
     private static void initMyAppLog() {
         final Logger logger = getLogger(MY_APP);
         final DailyRollingFileAppender dailyRollingFileAppender;
-        final Layout fileLayout = new PatternLayout("%d{yyy MMM dd HH:mm:ss.SSS}|%-5p|%t|%c %m%n");
-
+        final Layout fileLayout = new PatternLayout("%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p/%t/%C:%m%n");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            FileUtil.createNewFile(MyAppDirs.getLogDir() + "myapp.log");
-            dailyRollingFileAppender = new DailyRollingFileAppender(fileLayout, MyAppDirs.getLogDir() + "myapp.log", "yyyy-MM-dd");
+            String filePath = MyAppDirs.getLogDir() + TelephonyUtil.getDeviceId() + "-" + df.format(new Date()) + ".log";
+            FileUtil.createNewFile(filePath);
+            dailyRollingFileAppender = new DailyRollingFileAppender(fileLayout, filePath, "yyyy-MM-dd");
         } catch (final IOException e) {
             throw new RuntimeException("Exception configuring log system", e);
         }
@@ -44,23 +45,41 @@ public class Log extends Logger {
         logger.addAppender(dailyRollingFileAppender);
     }
 
-
-    private static void initErrorLog() {
-        final Logger logger = getLogger(ERROR);
-        final RollingFileAppender rollingFileAppender;
-        final Layout fileLayout = new PatternLayout("%d{yyy MMM dd HH:mm:ss.SSS}|%-5p|%t|%c %m%n");
+    private static void initCrashLog() {
+        final Logger logger = getLogger(CRASH);
+        final DailyRollingFileAppender dailyRollingFileAppender;
+        final Layout fileLayout = new PatternLayout("%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p/%t/%C:%m%n");
 
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            rollingFileAppender = new RollingFileAppender(fileLayout, MyAppDirs.getLogDir() + "error" + df.format(new Date()) + ".log");
+            String filePath = MyAppDirs.getLogDir() + TelephonyUtil.getDeviceId() + "-CrashReport-" + df.format(new Date()) + ".log";
+            FileUtil.createNewFile(filePath);
+            dailyRollingFileAppender = new DailyRollingFileAppender(fileLayout, filePath, "yyyy-MM-dd");
         } catch (final IOException e) {
             throw new RuntimeException("Exception configuring log system", e);
         }
+        dailyRollingFileAppender.setImmediateFlush(true);
 
-        rollingFileAppender.setMaxBackupIndex(10);
-        rollingFileAppender.setMaximumFileSize(1024 * 1024);
-        rollingFileAppender.setImmediateFlush(true);
-
-        logger.addAppender(rollingFileAppender);
+        logger.addAppender(dailyRollingFileAppender);
     }
+
+//
+//    private static void initErrorLog() {
+//        final Logger logger = getLogger(CRASH);
+//        final RollingFileAppender rollingFileAppender;
+//        final Layout fileLayout = new PatternLayout("%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p/%t/%C:%m%n");
+//
+//        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+//        try {
+//            rollingFileAppender = new RollingFileAppender(fileLayout, MyAppDirs.getLogDir() + "error" + df.format(new Date()) + ".log");
+//        } catch (final IOException e) {
+//            throw new RuntimeException("Exception configuring log system", e);
+//        }
+//
+//        rollingFileAppender.setMaxBackupIndex(10);
+//        rollingFileAppender.setMaximumFileSize(1024 * 1024);
+//        rollingFileAppender.setImmediateFlush(true);
+//
+//        logger.addAppender(rollingFileAppender);
+//    }
 }

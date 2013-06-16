@@ -2,14 +2,6 @@ package com.fuyong.main;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
-import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
-import org.apache.log4j.xml.DOMConfigurator;
-
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,6 +22,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        Thread.setDefaultUncaughtExceptionHandler(UncaughtExceptionHandler.getInstance());
         if (!FileUtil.isExit(MyAppDirs.getAppRootDir())) {
             AppEnvironment.initAppEnvironment();
         }
