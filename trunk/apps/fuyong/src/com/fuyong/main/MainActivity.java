@@ -1,32 +1,59 @@
 package com.fuyong.main;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import org.apache.log4j.Logger;
 
-public class MainActivity extends Activity {
-    private Logger log = Log.getLogger(Log.MY_APP);
+public class MainActivity extends BaseActivity {
+    /**
+     * Called when the activity is first created.
+     */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
 
     @Override
     protected void onPause() {
-        log.info("onPause");
         super.onPause();
     }
 
     @Override
     protected void onResume() {
-        log.info("onResume");
         super.onResume();
         bindService();
     }
 
     @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.exit)
+                .setMessage(R.string.yes_to_exit)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        ActivityManager.getInstance().destroyAllActivity();
+                        getApplication().onTerminate();
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                })
+                .create()
+                .show();
+    }
+
+    @Override
     protected void onStop() {
-        log.info("onStop");
         unBindService();
         super.onStop();
 
@@ -34,18 +61,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        log.info("onDestroy");
         super.onDestroy();
-    }
-
-    /**
-     * Called when the activity is first created.
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        log.info("onCreate");
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
     }
 
     private void bindService() {
@@ -60,13 +76,13 @@ public class MainActivity extends Activity {
     ServiceConnection sc = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            log.info("Connected MainService");
+            log.info("connected MainService");
             mainservice = ((MainService.MyBinder) iBinder).getService();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-            log.info("Disconnected MainService");
+            log.info("disconnected MainService");
             mainservice = null;
         }
     };

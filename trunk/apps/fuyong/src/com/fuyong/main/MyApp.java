@@ -2,6 +2,7 @@ package com.fuyong.main;
 
 import android.app.Application;
 import android.content.Context;
+import org.apache.log4j.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,7 +13,6 @@ import android.content.Context;
  */
 public class MyApp extends Application {
     private static MyApp instance = null;
-    private static final String APP_SETTINGS = "APP_SETTINGS";
 
     public static Context getAppContext() {
         return instance;
@@ -27,5 +27,34 @@ public class MyApp extends Application {
             AppEnvironment.initAppEnvironment();
         }
         Log.init();
+        Logger log = Log.getLogger(Log.MY_APP);
+        log.info("############################################");
+        log.info("############################################");
+        log.info("############                   #############");
+        log.info("############ Start Application #############");
+        log.info("############                   #############");
+        log.info("############################################");
+        log.info("############################################");
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        Logger log = Log.getLogger(Log.MY_APP);
+        log.info("###########################################");
+        log.info("###########################################");
+        log.info("############                  #############");
+        log.info("############ Exit application #############");
+        log.info("############                  #############");
+        log.info("###########################################");
+        log.info("###########################################");
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.init();
+        Logger log = Log.getLogger(Log.MY_APP);
+        log.warn("low memory");
     }
 }
