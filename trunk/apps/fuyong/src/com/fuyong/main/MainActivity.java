@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity;
 import org.apache.log4j.Logger;
 
 public class MainActivity extends BaseActivity {

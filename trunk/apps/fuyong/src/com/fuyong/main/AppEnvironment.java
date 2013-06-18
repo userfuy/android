@@ -17,12 +17,12 @@ public class AppEnvironment extends Environment {
 
     public static void initAppEnvironment() {
         new File(MyAppDirs.getAppRootDir()).mkdirs();
-        InputStream inputStream = MyApp.getAppContext().getResources().openRawResource(R.raw.log4j);
-        try {
-            String targetFilePath = MyAppDirs.getConfigDir() + "log4j.xml";
-            FileUtil.createNewFile(targetFilePath);
-            FileUtil.copyFile(inputStream, new FileOutputStream(targetFilePath));
-        } catch (IOException e) {
-        }
+//        InputStream inputStream = MyApp.getAppContext().getResources().openRawResource(R.raw.log4j);
+//        try {
+//            String targetFilePath = MyAppDirs.getConfigDir() + "log4j.xml";
+//            FileUtil.createNewFile(targetFilePath);
+//            FileUtil.copyFile(inputStream, new FileOutputStream(targetFilePath));
+//        } catch (IOException e) {
+//        }
     }
 }

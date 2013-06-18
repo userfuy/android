@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../external/ActionBarSherlock/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/../external/ActionBarSherlock/actionbarsherlock/actionbarsherlock.iml" group="external" />
+      <module fileurl="file://$PROJECT_DIR$/../external/SlidingMenu/example/example.iml" filepath="$PROJECT_DIR$/../external/SlidingMenu/example/example.iml" group="external/slidingmenu" />
       <module fileurl="file://$PROJECT_DIR$/../apps/fuyong/fuyong.iml" filepath="$PROJECT_DIR$/../apps/fuyong/fuyong.iml" group="apps" />
+      <module fileurl="file://$PROJECT_DIR$/../external/SlidingMenu/library/library.iml" filepath="$PROJECT_DIR$/../external/SlidingMenu/library/library.iml" group="external/slidingmenu" />
+      <module fileurl="file://$PROJECT_DIR$/../external/SlidingMenu/library-maps-support/library-maps-support.iml" filepath="$PROJECT_DIR$/../external/SlidingMenu/library-maps-support/library-maps-support.iml" group="external/slidingmenu" />
       <module fileurl="file://$PROJECT_DIR$/project.iml" filepath="$PROJECT_DIR$/project.iml" />
     </modules>
   </component>
