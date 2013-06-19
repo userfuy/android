@@ -43,7 +43,7 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
 
     synchronized public static UncaughtExceptionHandler getInstance() {
         if (null == instance) {
-            instance = new UncaughtExceptionHandler(MyApp.getAppContext());
+            instance = new UncaughtExceptionHandler(MyApp.getInstance().getAppContext());
         }
         return instance;
     }
@@ -62,18 +62,10 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
             sb.append(key + "=" + value + "\n");
         }
         log.error(sb);
-        //使用Toast来显示异常信息
-        new Thread() {
-            @Override
-            public void run() {
-                Looper.prepare();
-                Toast.makeText(myContext, "很抱歉,程序出现异常,即将退出.", Toast.LENGTH_LONG).show();
-                Looper.loop();
-            }
-        }.start();
 
-        Process.killProcess(Process.myPid());
-        System.exit(0);
+        new MyToastThread(myContext.getString(R.string.crash_msg)).start();
+        // 重启应用
+        new MyAppRestartThread().start();
     }
 
     private void collectDeviceInfo() {

@@ -5,4 +5,8 @@
     <string name="no">No</string>
     <string name="cancel">Cancel</string>
     <string name="exit">Exit</string>
+    <string name="crash_msg">Sorry, application has an exception, will exit!</string>
+
+    <!-- main activity-->
+    <string name="yes_to_exit">Do you want to exit?</string>
 </resources>

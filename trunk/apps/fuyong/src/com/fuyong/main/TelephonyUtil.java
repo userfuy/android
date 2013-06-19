@@ -12,7 +12,7 @@ import android.telephony.TelephonyManager;
  */
 public class TelephonyUtil {
     private static final TelephonyManager tm
-            = (TelephonyManager) MyApp.getAppContext().getSystemService(Context.TELEPHONY_SERVICE);
+            = (TelephonyManager) MyApp.getInstance().getAppContext().getSystemService(Context.TELEPHONY_SERVICE);
 
     public static String getDeviceId() {
         return tm.getDeviceId();

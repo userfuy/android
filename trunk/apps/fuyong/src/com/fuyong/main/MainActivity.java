@@ -29,6 +29,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        new MyToastThread("My app start.").start();
         bindService();
     }
 
@@ -47,6 +48,8 @@ public class MainActivity extends BaseActivity {
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        int j = 10 / 0;
                     }
                 })
                 .create()

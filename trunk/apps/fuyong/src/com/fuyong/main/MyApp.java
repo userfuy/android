@@ -14,8 +14,12 @@ import org.apache.log4j.Logger;
 public class MyApp extends Application {
     private static MyApp instance = null;
 
-    public static Context getAppContext() {
+    public static MyApp getInstance() {
         return instance;
+    }
+
+    public Context getAppContext() {
+        return getApplicationContext();
     }
 
     @Override

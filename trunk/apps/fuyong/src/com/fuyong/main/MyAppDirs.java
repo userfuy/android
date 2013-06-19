@@ -13,7 +13,7 @@ import java.io.File;
  */
 public class MyAppDirs {
     private final static String appRootDir = Environment.getExternalStorageDirectory()
-            + File.separator + MyApp.getAppContext().getString(R.string.app_name) + File.separator;
+            + File.separator + MyApp.getInstance().getAppContext().getString(R.string.app_name) + File.separator;
     private final static String configDir = appRootDir + "config" + File.separator;
     private final static String userDataDir = appRootDir + "userData" + File.separator;
     private final static String logDir = appRootDir + "log" + File.separator;
