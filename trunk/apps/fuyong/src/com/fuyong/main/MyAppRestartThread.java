@@ -16,11 +16,14 @@ import android.os.Process;
 public class MyAppRestartThread extends Thread {
     @Override
     public void run() {
+        Log.getLogger(Log.MY_APP).info("restart application after 1s");
         Context ctx = MyApp.getInstance().getAppContext();
         Intent intent = new Intent(ctx, MainActivity.class);
         PendingIntent restartIntent = PendingIntent.getActivity(ctx, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
         AlarmManager alarmManager = (AlarmManager) ctx.getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC, System.currentTimeMillis() + 1000, restartIntent);
+
+        Log.getLogger(Log.MY_APP).info("kill process");
         Process.killProcess(Process.myPid());
         System.exit(0);
     }

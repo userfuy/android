@@ -8,17 +8,51 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.view.View;
+import android.widget.Button;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity;
+import it.sauronsoftware.ftp4j.FTPClient;
 import org.apache.log4j.Logger;
 
 public class MainActivity extends BaseActivity {
-    /**
-     * Called when the activity is first created.
-     */
+    private Button startFtpBtn;
+    private Button stopFtpBtn;
+    private FTPClient ftpClient;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        startFtpBtn = (Button) findViewById(R.id.start_ftp);
+        startFtpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Thread() {
+                    @Override
+                    public void run() {
+                        ftpClient = FTPUtil.makeFtpConnection("58.60.106.160", 21, "probe", "123");
+                        if (null == ftpClient) {
+                            return;
+                        }
+                        FTPUtil.upload(ftpClient, MyAppDirs.getAppRootDir() + "ftp/up.dat", "/up/fy", null);
+                        FTPUtil.closeConnection(ftpClient);
+                    }
+                }.start();
+            }
+        });
+        stopFtpBtn = (Button) findViewById(R.id.stop_ftp);
+        stopFtpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                new Thread() {
+                    @Override
+                    public void run() {
+                        FTPUtil.abortDataTransfer(ftpClient, true);
+                    }
+                }.start();
+            }
+        });
     }
 
     @Override

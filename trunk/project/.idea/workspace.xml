@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidDesignerProfile">
+    <option name="fullProfile">
+      <profile>
+        <option name="device" value="4.65in 720p (Galaxy Nexus)" />
+        <option name="deviceConfiguration" value="Portrait" />
+        <option name="localeLanguage" value="zh" />
+        <option name="localeRegion" value="CN" />
+        <option name="targetHashString" value="android-15" />
+        <option name="theme" value="Sherlock.__Theme" />
+      </profile>
+    </option>
+    <option name="selection" value="[Full]" />
+  </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState>
+        <option name="device" value="2.7in QVGA" />
+        <option name="dockMode" value="" />
+        <option name="localeLanguage" value="zh" />
+        <option name="localeRegion" value="CN" />
+        <option name="nightMode" value="notnight" />
+        <option name="targetHashString" value="android-15" />
+        <option name="theme" value="Sherlock.__Theme" />
+        <option name="visible" value="false" />
+      </GlobalState>
+    </option>
+  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="fuyon" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
@@ -11,8 +38,8 @@
     <file path="$PROJECT_DIR$/AndroidManifest.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371368364891" ignored="false" />
     <file path="$PROJECT_DIR$/project.properties" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371368364870" ignored="false" />
     <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371368364891" ignored="false" />
-    <file path="/fragment.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371569000940" ignored="false" />
-    <file path="/Dummy.txt" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371650381356" ignored="false" />
+    <file path="/fragment.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371751334268" ignored="false" />
+    <file path="/Dummy.txt" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371741130250" ignored="false" />
     <file path="/MyApp.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371650847121" ignored="false" />
     <file path="/MyAppDirs.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371653187605" ignored="false" />
     <file path="/log4j.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371374049630" ignored="false" />
@@ -20,17 +47,21 @@
     <file path="/LogConfigurator.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371374912598" ignored="false" />
     <file path="/Logger.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371394151870" ignored="false" />
     <file path="/Log.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371393910814" ignored="false" />
-    <file path="/MainActivity.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371654344786" ignored="false" />
+    <file path="/MainActivity.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371756079940" ignored="false" />
     <file path="/UncaughtExceptionHandler.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371652466198" ignored="false" />
-    <file path="/a.dummy" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371392724449" ignored="false" />
+    <file path="/a.dummy" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371746455592" ignored="false" />
     <file path="/TelephonyUtil.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371653198139" ignored="false" />
     <file path="/ActivityManager.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371480904673" ignored="false" />
     <file path="/BaseActivity.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371481489193" ignored="false" />
     <file path="/common.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371652564363" ignored="false" />
     <file path="/main_activity.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371653558361" ignored="false" />
-    <file path="/MyAppRestartThread.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371651568596" ignored="false" />
+    <file path="/MyAppRestartThread.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371655599363" ignored="false" />
     <file path="/MyToastThread.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371651911979" ignored="false" />
     <file path="/strings.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371653664634" ignored="false" />
+    <file path="$PROJECT_DIR$/../external/SlidingMenu/library/project.properties" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371741374585" ignored="false" />
+    <file path="/main.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371741853918" ignored="false" />
+    <file path="/FTPUtil.java" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371756803687" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="ef6ebf7b-b9ca-4832-89ce-cc457cd2ea55" time="1371749690942" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,28 +69,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FileUtil.java" line="18" class="com.fuyong.main.FileUtil" package="com.fuyong.main">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/UncaughtExceptionHandler.java" line="51" class="com.fuyong.main.UncaughtExceptionHandler" package="com.fuyong.main">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -74,7 +102,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java" line="67" class="com.fuyong.main.MainActivity" package="com.fuyong.main">
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java" line="101" class="com.fuyong.main.MainActivity" package="com.fuyong.main">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -88,7 +116,119 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java" line="44" class="com.fuyong.main.MainActivity$1" package="com.fuyong.main">
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java" line="78" class="com.fuyong.main.MainActivity$3" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="226" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="182" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="180" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="178" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="123" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="125" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" line="135" class="com.fuyong.main.FTPUtil" package="com.fuyong.main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPClient.java" line="3691" class="it.sauronsoftware.ftp4j.FTPClient" package="it.sauronsoftware.ftp4j">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -103,7 +243,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -147,60 +286,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UncaughtExceptionHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/UncaughtExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="64" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="51" selection-start="328" selection-end="328" vertical-scroll-proportion="-6.08">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/res/values-es/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="43" selection-start="428" selection-end="428" vertical-scroll-proportion="-8.36">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/res/values-zh-rCN/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="28" selection-start="315" selection-end="315" vertical-scroll-proportion="-6.84">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="51" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
+            <state line="37" column="40" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1495#1727#0" expanded="true" />
-                <element signature="e#1708#1709#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyAppRestartThread.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppRestartThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="24" selection-start="919" selection-end="919" vertical-scroll-proportion="0.6013986">
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#883#1532#0" expanded="true" />
+                <element signature="e#1521#1522#0" expanded="true" />
+                <element signature="e#1632#1970#0" expanded="true" />
+                <element signature="e#1959#1960#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -209,28 +303,82 @@
       <file leaf-file-name="MyAppDirs.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppDirs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="66" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TelephonyUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/TelephonyUtil.java">
+      <file leaf-file-name="View.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/android/adt-bundle-windows-x86_64/sdk/platforms/android-15/android.jar!/android/view/View.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="68" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+            <state line="788" column="19" selection-start="34702" selection-end="34702" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyToastThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyToastThread.java">
+      <file leaf-file-name="FTPUtil.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="32" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+            <state line="106" column="13" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.04556355">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageQueue.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/android/adt-bundle-windows-x86_64/sdk/platforms/android-15/android.jar!/android/os/MessageQueue.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../apps/fuyong/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="62" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UncaughtExceptionHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/UncaughtExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="0" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FileUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FTPClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3680" column="0" selection-start="117024" selection-end="117024" vertical-scroll-proportion="-0.76">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FTPFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="28" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,12 +401,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../external/SlidingMenu/example/src/com/jeremyfeinstein/slidingmenu/example/fragments/ResponsiveUIActivity.java" />
-        <option value="$PROJECT_DIR$/../external/SlidingMenu/example/src/com/jeremyfeinstein/slidingmenu/example/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyApp.java" />
-        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppRestartThread.java" />
-        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyToast.java" />
-        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyToastThread.java" />
         <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/UncaughtExceptionHandler.java" />
         <option value="$PROJECT_DIR$/../apps/fuyong/res/values-zh/common.xml" />
         <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppDirs.java" />
@@ -268,9 +410,18 @@
         <option value="$PROJECT_DIR$/../apps/fuyong/res/values/common.xml" />
         <option value="$PROJECT_DIR$/../apps/fuyong/res/values-zh-rCN/strings.xml" />
         <option value="$PROJECT_DIR$/../apps/fuyong/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppRestartThread.java" />
+        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyApp.java" />
+        <option value="$PROJECT_DIR$/../apps/fuyong/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/../apps/fuyong/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPClient.java" />
         <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -304,9 +455,59 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftp4j-1.7.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftp4j-1.7.2.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftp4j-1.7.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftp4j-1.7.2.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftp4j" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="project" />
@@ -505,6 +706,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FTPUtil.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuyong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -575,33 +802,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuyong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../libs/android-support-v4.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../external/ftp4j-1.7.2/src" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="DEBUGGABLE_DEVICE" value="0146B55802009008" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="DEBUGGABLE_DEVICE" value="0146B55802009008" />
     <property name="DEBUGGABLE_PROCESS" value="com.fuyong.main" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -643,6 +893,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -669,19 +932,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -847,33 +1097,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1292" height="786" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31219512" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4544" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.49756888" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4784" sideWeight="0.49675852" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3216" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31382114" sideWeight="0.7856" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2144" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4784" sideWeight="0.49675852" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31382114" sideWeight="0.4208" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -936,105 +1189,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../external/ActionBarSherlock/actionbarsherlock/src/com/actionbarsherlock/app/SherlockPreferenceActivity.java">
+    <entry file="jar://$PROJECT_DIR$/../libs/ftp4j-1.7.2.jar!/it/sauronsoftware/ftp4j/FTPCommunicationListener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
+        <state line="6" column="17" selection-start="170" selection-end="170" vertical-scroll-proportion="-3.8">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../external/SlidingMenu/example/res/xml/main.xml">
+    <entry file="jar://$PROJECT_DIR$/../libs/ftp4j-1.7.2.jar!/it/sauronsoftware/ftp4j/FTPFile.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+        <state line="8" column="28" selection-start="247" selection-end="247" vertical-scroll-proportion="-5.32">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../external/SlidingMenu/example/res/menu/example_list.xml">
+    <entry file="jar://$PROJECT_DIR$/../libs/ftp4j-1.7.2.jar!/it/sauronsoftware/ftp4j/FTPClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+        <state line="200" column="19" selection-start="15230" selection-end="15230" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../external/SlidingMenu/example/src/com/jeremyfeinstein/slidingmenu/example/ExampleListActivity.java">
+    <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPCommunicationChannel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="54" selection-start="3833" selection-end="3833" vertical-scroll-proportion="0.0">
+        <state line="35" column="13" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyApp.java">
+    <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPCommunicationListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+        <state line="29" column="17" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPDataTransferListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="17" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="28" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/adt-bundle-windows-x86_64/sdk/platforms/android-15/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="788" column="19" selection-start="34702" selection-end="34702" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/UncaughtExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="64" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.0">
+        <state line="51" column="0" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apps/fuyong/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="62" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppDirs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="66" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/TelephonyUtil.java">
+    <entry file="jar://D:/android/adt-bundle-windows-x86_64/sdk/platforms/android-15/android.jar!/android/os/MessageQueue.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="68" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/res/values-zh-rCN/strings.xml">
+    <entry file="file://$PROJECT_DIR$/../external/ftp4j-1.7.2/src/it/sauronsoftware/ftp4j/FTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="315" selection-end="315" vertical-scroll-proportion="-6.84">
+        <state line="3680" column="0" selection-start="117024" selection-end="117024" vertical-scroll-proportion="-0.76">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/res/values-es/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="43" selection-start="428" selection-end="428" vertical-scroll-proportion="-8.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="51" selection-start="328" selection-end="328" vertical-scroll-proportion="-6.08">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyToastThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="32" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="51" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
+        <state line="37" column="40" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1495#1727#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#883#1532#0" expanded="true" />
+            <element signature="e#1521#1522#0" expanded="true" />
+            <element signature="e#1632#1970#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/MyAppRestartThread.java">
+    <entry file="file://$PROJECT_DIR$/../apps/fuyong/src/com/fuyong/main/FTPUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="919" selection-end="919" vertical-scroll-proportion="0.6013986">
+        <state line="106" column="13" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.04556355">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1070,7 +1337,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>android-support-v4</last-edited>
+          <last-edited>ftp4j-1.7.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
