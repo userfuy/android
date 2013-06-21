@@ -67,7 +67,7 @@ public final class FTPUtil {
             return;
         }
 
-        if (isExist(client, remoteFile) == FTPFile.TYPE_FILE) {
+        if (isExist(client, remoteFile) != FTPFile.TYPE_FILE) {
             log.warn(remoteFile + " is not exist");
             return;
         }
