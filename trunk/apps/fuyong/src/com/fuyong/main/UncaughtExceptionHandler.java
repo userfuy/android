@@ -62,8 +62,10 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
             sb.append(key + "=" + value + "\n");
         }
         log.error(sb);
-
-        new MyToastThread(myContext.getString(R.string.crash_msg)).start();
+        Toast.makeText(MyApp.getInstance().getAppContext()
+                , R.string.crash_msg
+                , Toast.LENGTH_SHORT)
+                .show();
         // 重启应用
         new MyAppRestartThread().start();
     }

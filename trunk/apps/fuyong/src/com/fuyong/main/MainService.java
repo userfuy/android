@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import com.fuyong.main.test.TestManager;
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,5 +50,10 @@ public class MainService extends Service {
     @Override
     public void onRebind(Intent intent) {
         super.onRebind(intent);    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
+
+    public TestManager getTestManager() {
+        return TestManager.getInstance();
     }
 }
