@@ -88,6 +88,8 @@ public final class FTPUtil {
         localPath = PathToolkit.formatFilePath(localPath);
         try {
             client.download(remoteFile, new File(localPath), dataTransferListener);
+            log.info("ftp download success");
+            return;
         } catch (FTPException e) {
             log.error("ftp exception");
         } catch (FileNotFoundException e) {
@@ -101,6 +103,7 @@ public final class FTPUtil {
         } catch (FTPAbortedException e) {
             log.error("ftp aborted exception");
         }
+        log.info("ftp download failed");
     }
 
 
@@ -124,6 +127,7 @@ public final class FTPUtil {
             client.upload(localFile, dataTransferListener);
             client.changeDirectory("/");
             log.info("ftp upload success");
+            return;
         } catch (FileNotFoundException e) {
             log.error("file not found");
         } catch (IOException e) {
@@ -137,6 +141,7 @@ public final class FTPUtil {
         } catch (FTPIllegalReplyException e) {
             log.error("ftp illegal reply exception");
         }
+        log.info("ftp upload failed");
     }
 
     public static void mkdirs(FTPClient client, String path) throws FTPException, IOException, FTPIllegalReplyException {

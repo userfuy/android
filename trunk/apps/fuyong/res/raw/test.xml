@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+    <voice>
+        <number>10010</number>
+        <call-time>5</call-time>
+        <count>5</count>
+        <test-intervel>10</test-intervel>
+    </voice>
+</test>

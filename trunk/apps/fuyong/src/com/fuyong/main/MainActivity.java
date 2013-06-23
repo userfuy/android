@@ -17,6 +17,8 @@ import org.apache.log4j.Logger;
 public class MainActivity extends BaseActivity {
     private Button startFtpBtn;
     private Button stopFtpBtn;
+    private Button startTestBtn;
+    private Button stopTestBtn;
     private FTPClient ftpClient;
 
     @Override
@@ -53,6 +55,21 @@ public class MainActivity extends BaseActivity {
                 }.start();
             }
         });
+
+        startTestBtn = (Button) findViewById(R.id.start_test);
+        startTestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainservice.getTestManager().start();
+            }
+        });
+        stopTestBtn = (Button) findViewById(R.id.stop_test);
+        stopTestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainservice.getTestManager().stop();
+            }
+        });
     }
 
     @Override
@@ -63,7 +80,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        new MyToastThread("My app start.").start();
         bindService();
     }
 

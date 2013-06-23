@@ -22,7 +22,7 @@ public class MyToastThread extends Thread {
     public void run() {
 
         Looper.prepare();
-        Toast.makeText(MyApp.getInstance().getAppContext(), msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(MyApp.getInstance().getAppContext(), msg, Toast.LENGTH_SHORT).show();
         Looper.loop();
     }
 }
