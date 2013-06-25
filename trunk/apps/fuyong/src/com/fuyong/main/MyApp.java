@@ -53,7 +53,6 @@ public class MyApp extends Application {
     @Override
     public void onLowMemory() {
         super.onLowMemory();
-        Log.init();
         Logger log = Log.getLogger(Log.MY_APP);
         log.warn("low memory");
     }
