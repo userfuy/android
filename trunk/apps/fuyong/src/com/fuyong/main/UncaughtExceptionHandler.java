@@ -1,15 +1,9 @@
 package com.fuyong.main;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
-import android.os.Looper;
-import android.os.Process;
 import android.widget.Toast;
 import org.apache.log4j.Logger;
 

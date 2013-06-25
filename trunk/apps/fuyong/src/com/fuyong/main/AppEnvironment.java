@@ -1,10 +1,8 @@
 package com.fuyong.main;
 
 import android.os.Environment;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
-import java.io.*;
+import java.io.File;
 
 /**
  * Created with IntelliJ IDEA.

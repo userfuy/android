@@ -9,9 +9,6 @@ import android.telephony.TelephonyManager;
 import com.android.internal.telephony.ITelephony;
 import org.apache.log4j.Logger;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 /**
  * Created with IntelliJ IDEA.
  * User: democrazy

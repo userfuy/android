@@ -1,6 +1,5 @@
 package com.fuyong.main;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.DialogInterface;
@@ -10,9 +9,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
-import com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity;
 import it.sauronsoftware.ftp4j.FTPClient;
-import org.apache.log4j.Logger;
 
 public class MainActivity extends BaseActivity {
     private Button startFtpBtn;

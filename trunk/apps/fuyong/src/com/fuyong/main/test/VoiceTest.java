@@ -2,9 +2,9 @@ package com.fuyong.main.test;
 
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
+import com.fuyong.main.MyScheduledThreadPool;
 import com.fuyong.main.TelephonyUtil;
 
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,13 +41,13 @@ public class VoiceTest extends Test {
         } catch (InterruptedException e) {
             log.error(e.toString());
         } finally {
-            TelephonyUtil.getTelephonyManager().listen(null, PhoneStateListener.LISTEN_CALL_STATE);
+            TelephonyUtil.getTelephonyManager().listen(phoneStateListener, PhoneStateListener.LISTEN_NONE);
+            endCall();
         }
         return null;
     }
 
     private PhoneStateListener phoneStateListener = new PhoneStateListener() {
-
         @Override
         public void onCallStateChanged(int state, String incomingNumber) {
             super.onCallStateChanged(state, incomingNumber);
@@ -59,7 +59,7 @@ public class VoiceTest extends Test {
                     log.info("call state: off hook");
                     onCallEstablished();
                     if (null == incomingNumber || incomingNumber.isEmpty()) {
-                        Executors.newScheduledThreadPool(1).schedule(new Runnable() {
+                        MyScheduledThreadPool.getExecutor().schedule(new Runnable() {
                             @Override
                             public void run() {
                                 endCall();

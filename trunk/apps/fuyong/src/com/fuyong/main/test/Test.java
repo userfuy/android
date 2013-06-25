@@ -12,6 +12,6 @@ import java.util.concurrent.Callable;
  * Time: 下午4:38
  * To change this template use File | Settings | File Templates.
  */
-public abstract class Test implements Callable {
+public abstract class Test implements Callable<Object> {
     protected Logger log = Log.getLogger(Log.MY_APP);
 }
