@@ -2,6 +2,7 @@ package com.fuyong.main;
 
 import android.app.Application;
 import android.content.Context;
+import cn.jpush.android.api.JPushInterface;
 import org.apache.log4j.Logger;
 
 /**
@@ -26,10 +27,12 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        initJPush();
         Thread.setDefaultUncaughtExceptionHandler(UncaughtExceptionHandler.getInstance());
         if (!FileUtil.isExit(MyAppDirs.getAppRootDir())) {
             AppEnvironment.initAppEnvironment();
         }
+
         Log.init();
         Logger log = Log.getLogger(Log.MY_APP);
         log.info("\n############################################\n" +
@@ -37,6 +40,11 @@ public class MyApp extends Application {
                 "############ Start Application #############\n" +
                 "############                   #############\n" +
                 "############################################\n");
+    }
+
+    private void initJPush() {
+        JPushInterface.setDebugMode(false);
+        JPushInterface.init(this);
     }
 
     @Override
