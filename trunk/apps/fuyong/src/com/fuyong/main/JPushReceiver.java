@@ -36,6 +36,7 @@ public class JPushReceiver extends BroadcastReceiver {
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
             log.debug("JPush: user opened notification");
             // 在这里可以自己写代码去定义用户点击后的行为
+            context.startActivity(new Intent("android.intent.action.MAIN"));
         } else {
             log.warn("JPush unhandled intent - " + intent.getAction());
         }
