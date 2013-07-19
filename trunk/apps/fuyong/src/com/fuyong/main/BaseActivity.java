@@ -2,6 +2,7 @@ package com.fuyong.main;
 
 import android.app.Activity;
 import android.os.Bundle;
+import cn.jpush.android.api.JPushInterface;
 import org.apache.log4j.Logger;
 
 /**
@@ -24,6 +25,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
+        JPushInterface.activityStarted(this);
     }
 
     @Override
@@ -44,6 +46,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onStop() {
         super.onStop();
+        JPushInterface.activityStopped(this);
     }
 
     @Override

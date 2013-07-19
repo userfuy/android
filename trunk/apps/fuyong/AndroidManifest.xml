@@ -50,6 +50,17 @@
             </intent-filter>
         </service>
 
+        <receiver
+                android:name="JPushReceiver"
+                android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <category android:name="com.fuyong.main"/>
+            </intent-filter>
+        </receiver>
         <!-- Required -->
         <service
                 android:name="cn.jpush.android.service.PushService"

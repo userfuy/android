@@ -5,6 +5,9 @@ import android.content.Context;
 import cn.jpush.android.api.JPushInterface;
 import org.apache.log4j.Logger;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  * User: democrazy
@@ -45,6 +48,9 @@ public class MyApp extends Application {
     private void initJPush() {
         JPushInterface.setDebugMode(false);
         JPushInterface.init(this);
+        Set<String> tags = new LinkedHashSet<String>();
+        tags.add("debug");
+        JPushInterface.setAliasAndTags(this, "debug", tags);
     }
 
     @Override
