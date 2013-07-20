@@ -5,8 +5,6 @@ import com.fuyong.main.Log;
 import com.fuyong.main.MyApp;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

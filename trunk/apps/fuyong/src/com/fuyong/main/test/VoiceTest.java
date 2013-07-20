@@ -1,12 +1,6 @@
 package com.fuyong.main.test;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
-import com.fuyong.main.MyApp;
 import com.fuyong.main.MyScheduledThreadPool;
 import com.fuyong.main.PhoneStateReceiver;
 import com.fuyong.main.TelephonyUtil;

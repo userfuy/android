@@ -1,14 +1,11 @@
 package com.fuyong.main;
 
-import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.telephony.TelephonyManager;
 
 import java.util.Observable;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.

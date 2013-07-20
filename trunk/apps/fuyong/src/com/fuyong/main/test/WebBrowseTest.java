@@ -6,7 +6,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import org.dom4j.Element;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
