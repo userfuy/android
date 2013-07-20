@@ -3,6 +3,7 @@ package com.fuyong.main;
 import android.app.Application;
 import android.content.Context;
 import cn.jpush.android.api.JPushInterface;
+import com.fuyong.main.test.MyWebView;
 import org.apache.log4j.Logger;
 
 import java.util.LinkedHashSet;
@@ -43,6 +44,7 @@ public class MyApp extends Application {
                 "############ Start Application #############\n" +
                 "############                   #############\n" +
                 "############################################\n");
+        MyWebView.getInstance();
     }
 
     private void initJPush() {

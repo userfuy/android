@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/linear_layout"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
-    <LinearLayout
+    <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-        <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Hello World, MainActivity"
-                />
-        <Button
-                android:id="@+id/start_ftp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="start ftp"/>
+            android:layout_height="wrap_content"
+            android:text="Hello World, MainActivity"
+            />
+    <Button
+            android:id="@+id/start_ftp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="start ftp"/>
 
-        <Button
-                android:id="@+id/stop_ftp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="stop ftp"/>
+    <Button
+            android:id="@+id/stop_ftp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="stop ftp"/>
 
-        <Button
-                android:id="@+id/start_test"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="start test"/>
+    <Button
+            android:id="@+id/start_test"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="start test"/>
 
-        <Button
-                android:id="@+id/stop_test"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="stop test"/>
-    </LinearLayout>
+    <Button
+            android:id="@+id/stop_test"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="stop test"/>
+
+    <Button
+            android:id="@+id/settings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="settings"/>
 </LinearLayout>
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FuY</string>
+    <string name="packet_name">com.fuyong.main</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="cancel">Cancel</string>
@@ -9,4 +10,11 @@
 
     <!-- main activity-->
     <string name="yes_to_exit">Do you want to exit?</string>
+
+    <!-- settings activity-->
+    <string name="settings">Settings</string>
+    <string name="header_name">header name</string>
+
+    <string name="wifi">Wi-Fi</string>
+    <string name="data_upload">Data Upload</string>
 </resources>

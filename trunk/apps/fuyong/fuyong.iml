@@ -42,6 +42,7 @@
     <orderEntry type="module" module-name="library" />
     <orderEntry type="library" name="ftp4j-1.7.2" level="application" />
     <orderEntry type="library" name="jpush-1.4.0" level="project" />
+    <orderEntry type="library" name="dom4j-1.6.1" level="application" />
   </component>
 </module>
 

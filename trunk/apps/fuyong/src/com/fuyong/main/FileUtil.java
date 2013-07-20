@@ -1,6 +1,5 @@
 package com.fuyong.main;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -13,10 +12,10 @@ import java.io.*;
  * To change this template use File | Settings | File Templates.
  */
 public class FileUtil {
-    private Logger logger = LogManager.getLogger(FileUtil.class);
+    private Logger log = Log.getLogger(Log.MY_APP);
 
     public static boolean createNewFile(String filePath) throws IOException {
-        File file = new File(filePath.substring(0,filePath.lastIndexOf(File.separator)));
+        File file = new File(filePath.substring(0, filePath.lastIndexOf(File.separator)));
         file.mkdirs();
         return new File(filePath).createNewFile();
     }

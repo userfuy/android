@@ -31,6 +31,7 @@ public class TestManager {
     private ExecutorService executorService;
     private int testState = TEST_IDLE;
     private Object testStateLock = new Object();
+    private TestConfig testConfig = new TestConfig();
 
     private TestManager() {
     }
@@ -42,7 +43,7 @@ public class TestManager {
         return instance;
     }
 
-    public void start() {
+    public void start(final String filePath) {
         synchronized (testStateLock) {
             if (TEST_RUN == testState) {
                 Toast.makeText(MyApp.getInstance().getAppContext()
@@ -53,25 +54,27 @@ public class TestManager {
             }
             testState = TEST_RUN;
         }
-        log.info("start test");
-        final List<Test> testList = new ArrayList<Test>();
-        testList.add(new VoiceTest());
-        testList.add(new VoiceTest());
         new Thread(new Runnable() {
             @Override
             public void run() {
-                startTest(testList);
+                startTest(filePath);
             }
         }).start();
     }
 
-    private void startTest(Collection<Test> tests) {
+    private void startTest(String filePath) {
+        changeTestState(TEST_RUN);
         executorService = Executors.newSingleThreadExecutor();
-        synchronized (testStateLock) {
-            testState = TEST_RUN;
-        }
         onTestStarted();
-        for (Test test : tests) {
+        log.info("begin test");
+        if (!testConfig.load(filePath)) {
+            changeTestState(TEST_IDLE);
+            return;
+        }
+        List<Test> testList;
+        testConfig.parse();
+        testList = testConfig.getTestList();
+        for (Test test : testList) {
             executorService.submit(test);
         }
         executorService.shutdown();
@@ -79,16 +82,18 @@ public class TestManager {
             while (!executorService.awaitTermination(60, TimeUnit.MINUTES)) {
                 log.warn("awaitTermination time out: 60min");
             }
-            synchronized (testStateLock) {
-                testState = TEST_COMPLETE;
-            }
             onTestCompleted();
+            changeTestState(TEST_COMPLETE);
         } catch (InterruptedException e) {
-            synchronized (testStateLock) {
-                testState = TEST_INTERRUPT;
-            }
-            log.error(e.toString());
+            changeTestState(TEST_INTERRUPT);
             onTestInterrupted();
+            log.error(e.toString());
+        }
+    }
+
+    private void changeTestState(int state) {
+        synchronized (testStateLock) {
+            testState = state;
         }
     }
 

@@ -5,17 +5,28 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import com.fuyong.main.test.MyWebView;
 import it.sauronsoftware.ftp4j.FTPClient;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class MainActivity extends BaseActivity {
     private Button startFtpBtn;
     private Button stopFtpBtn;
     private Button startTestBtn;
     private Button stopTestBtn;
+    private Button settingsBtn;
     private FTPClient ftpClient;
 
     @Override
@@ -57,7 +68,7 @@ public class MainActivity extends BaseActivity {
         startTestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainservice.getTestManager().start();
+                mainservice.getTestManager().start(MyAppDirs.getConfigDir() + "test/test_default.xml");
             }
         });
         stopTestBtn = (Button) findViewById(R.id.stop_test);
@@ -67,6 +78,15 @@ public class MainActivity extends BaseActivity {
                 mainservice.getTestManager().stop();
             }
         });
+        settingsBtn = (Button) findViewById(R.id.settings);
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+            }
+        });
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
+        linearLayout.addView(MyWebView.getInstance().getWebView());
     }
 
     @Override
