@@ -3,8 +3,8 @@ package com.fuyong.main;
 import org.apache.log4j.*;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,9 +32,8 @@ public class Log extends Logger {
         final Logger logger = getLogger(MY_APP);
         final DailyRollingFileAppender dailyRollingFileAppender;
         final Layout fileLayout = new PatternLayout("%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p/%t/%C:%m%n");
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            String filePath = MyAppDirs.getLogDir() + TelephonyUtil.getDeviceId() + "-" + df.format(new Date()) + ".log";
+            String filePath = MyAppDirs.getLogDir() + TelephonyUtil.getDeviceId() + "-log";
             FileUtil.createNewFile(filePath);
             dailyRollingFileAppender = new DailyRollingFileAppender(fileLayout, filePath, "yyyy-MM-dd");
         } catch (final IOException e) {
@@ -49,10 +48,8 @@ public class Log extends Logger {
         final Logger logger = getLogger(CRASH);
         final DailyRollingFileAppender dailyRollingFileAppender;
         final Layout fileLayout = new PatternLayout("%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p/%t/%C:%m%n");
-
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            String filePath = MyAppDirs.getLogDir() + TelephonyUtil.getDeviceId() + "-CrashReport-" + df.format(new Date()) + ".log";
+            String filePath = MyAppDirs.getLogDir() + TelephonyUtil.getDeviceId() + "-CrashReport";
             FileUtil.createNewFile(filePath);
             dailyRollingFileAppender = new DailyRollingFileAppender(fileLayout, filePath, "yyyy-MM-dd");
         } catch (final IOException e) {
@@ -61,6 +58,12 @@ public class Log extends Logger {
         dailyRollingFileAppender.setImmediateFlush(true);
 
         logger.addAppender(dailyRollingFileAppender);
+    }
+
+    public static void exception(Throwable e) {
+        StringWriter stack = new StringWriter();
+        e.printStackTrace(new PrintWriter(stack));
+        Log.getLogger(MY_APP).error(stack.toString());
     }
 
 //
