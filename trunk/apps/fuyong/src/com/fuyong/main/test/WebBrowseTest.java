@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import com.fuyong.main.Log;
 import org.dom4j.Element;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class WebBrowseTest extends Test {
 
     public class WebBrowseCfg {
         public String url;
-        public String count;
+        public int count;
     }
 
     @Override
@@ -36,7 +37,7 @@ public class WebBrowseTest extends Test {
             Element row = (Element) iter.next();
             WebBrowseCfg webBrowseCfg = new WebBrowseCfg();
             webBrowseCfg.url = getStringValue(row.elementTextTrim("url"), "");
-            webBrowseCfg.count = getStringValue(row.elementTextTrim("count"), "0");
+            webBrowseCfg.count = Integer.parseInt(getStringValue(row.elementTextTrim("count"), "0"));
             webBrowseCfgList.add(webBrowseCfg);
         }
         interval = Integer.parseInt(getStringValue(element.elementTextTrim("test-interval"), "5"));
@@ -44,24 +45,23 @@ public class WebBrowseTest extends Test {
 
     @Override
     public Object call() {
+        log.info("begin web brows test");
         try {
-            log.info("begin web brows test");
             initWebView();
             for (WebBrowseCfg webBrowseCfg : webBrowseCfgList) {
-                int count = Integer.parseInt(getStringValue(webBrowseCfg.count, "0"));
+                int count = webBrowseCfg.count;
                 for (int i = 0; i < count; ++i) {
                     MyWebView.getInstance().loadUrl(webBrowseCfg.url);
                     synchronized (WebBrowseTest.this) {
                         wait(60 * 1000);
                     }
-                    MyWebView.getInstance().clearView();
                     Thread.sleep(1000 * interval);
                 }
             }
         } catch (InterruptedException e) {
-            log.info("test interrupted");
+            Log.exception(e);
         } catch (Exception e) {
-            log.error(e.toString());
+            Log.exception(e);
         } finally {
             log.info("end web brows test");
         }

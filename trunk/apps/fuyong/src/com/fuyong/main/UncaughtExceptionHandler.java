@@ -24,8 +24,6 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
     private static UncaughtExceptionHandler instance;
     private Logger log = Log.getLogger(Log.CRASH);
     private final Context myContext;
-    //用来存储设备信息和异常信息
-    private Map<String, String> infoMap = new HashMap<String, String>();
 
     private UncaughtExceptionHandler() {
         myContext = null;
@@ -42,13 +40,12 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
         return instance;
     }
 
-    public void uncaughtException(Thread thread, Throwable exception) {
+    public void uncaughtException(Thread thread, Throwable e) {
         StringWriter stackTrace = new StringWriter();
-        exception.printStackTrace(new PrintWriter(stackTrace));
-        System.err.println(stackTrace);
+        e.printStackTrace(new PrintWriter(stackTrace));
         log.error(stackTrace.toString());
 
-        collectDeviceInfo();
+        Map<String, String> infoMap = collectDeviceInfo();
         StringBuffer sb = new StringBuffer();
         for (Map.Entry<String, String> entry : infoMap.entrySet()) {
             String key = entry.getKey();
@@ -64,8 +61,9 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
         new MyAppRestartThread().start();
     }
 
-    private void collectDeviceInfo() {
-        infoMap.clear();
+    private Map<String, String> collectDeviceInfo() {
+        //用来存储设备信息和异常信息
+        Map<String, String> infoMap = new HashMap<String, String>();
         try {
             PackageManager pm = myContext.getPackageManager();
             PackageInfo pi = pm.getPackageInfo(myContext.getPackageName(), PackageManager.GET_ACTIVITIES);
@@ -83,10 +81,10 @@ public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
             try {
                 field.setAccessible(true);
                 infoMap.put(field.getName(), field.get(null).toString());
-                log.error(field.getName() + " : " + field.get(null));
             } catch (Exception e) {
                 log.error("collect crash info\n" + e.toString());
             }
         }
+        return infoMap;
     }
 }

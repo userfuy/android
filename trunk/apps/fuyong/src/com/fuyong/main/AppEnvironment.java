@@ -24,7 +24,7 @@ public class AppEnvironment extends Environment {
             FileUtil.createNewFile(targetFilePath);
             FileUtil.copyFile(inputStream, new FileOutputStream(targetFilePath));
         } catch (IOException e) {
-            Log.getLogger(Log.MY_APP).error(e.toString());
+            Log.exception(e);
         }
     }
 }

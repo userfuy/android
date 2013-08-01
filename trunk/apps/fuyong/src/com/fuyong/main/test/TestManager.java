@@ -83,9 +83,10 @@ public class TestManager {
             onTestCompleted();
             changeTestState(TEST_COMPLETE);
         } catch (InterruptedException e) {
+            executorService.shutdownNow();
             changeTestState(TEST_INTERRUPT);
             onTestInterrupted();
-            log.error(e.toString());
+            Log.exception(e);
         }
     }
 

@@ -1,6 +1,7 @@
 package com.fuyong.main.test;
 
 import android.telephony.TelephonyManager;
+import com.fuyong.main.Log;
 import com.fuyong.main.MyScheduledThreadPool;
 import com.fuyong.main.PhoneStateReceiver;
 import com.fuyong.main.TelephonyUtil;
@@ -8,6 +9,7 @@ import org.dom4j.Element;
 
 import java.util.Observable;
 import java.util.Observer;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -24,7 +26,7 @@ public class VoiceTest extends Test implements Observer {
     private int count;
     private int interval;
 
-    private boolean endCall;
+    private ScheduledFuture<?> endCallTask;
 
     @Override
     public void config(Element element) {
@@ -44,15 +46,10 @@ public class VoiceTest extends Test implements Observer {
             PhoneStateReceiver.getInstance().addObserver(this);
             for (int i = 0; i < count; ++i) {
                 log.info("test index: " + i);
-                endCall = false;
                 onStartCall();
                 if (TelephonyUtil.call(number)) {
                     synchronized (this) {
                         wait(3000 * callTime);
-                    }
-                    //等待超时， 呼叫失败
-                    if (!endCall) {
-                        onCallFailed();
                     }
                 } else {
                     onCallFailed();
@@ -60,10 +57,10 @@ public class VoiceTest extends Test implements Observer {
                 Thread.sleep(1000 * interval);
             }
         } catch (InterruptedException e) {
-            log.info("test interrupted");
+            Log.exception(e);
             endCall();
         } catch (Exception e) {
-            log.error(e.toString());
+            Log.exception(e);
         } finally {
             PhoneStateReceiver.getInstance().deleteObserver(this);
             log.info("end voice test");
@@ -73,8 +70,11 @@ public class VoiceTest extends Test implements Observer {
 
     private void endCall() {
         TelephonyUtil.endCall();
+        stopWait();
+    }
+
+    private void stopWait() {
         synchronized (this) {
-            endCall = true;
             notifyAll();
         }
     }
@@ -102,11 +102,19 @@ public class VoiceTest extends Test implements Observer {
         switch (state.intValue()) {
             case TelephonyManager.CALL_STATE_IDLE:
                 log.info("call state: idle");
+                if (null != endCallTask) {
+                    if (endCallTask.isDone()) {
+
+                    } else {
+                        endCallTask.cancel(true);
+                    }
+                }
+                stopWait();
                 break;
             case TelephonyManager.CALL_STATE_OFFHOOK:
                 log.info("call state: off hook");
                 onCallEstablished();
-                MyScheduledThreadPool.getExecutor().schedule(new Runnable() {
+                endCallTask = MyScheduledThreadPool.getExecutor().schedule(new Runnable() {
                     @Override
                     public void run() {
                         endCall();
