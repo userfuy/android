@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+            android:key="ftp_address"
+            android:title="Address"
+            android:defaultValue="0.0.0.0">
+    </EditTextPreference>
+    <EditTextPreference
+            android:key="ftp_port"
+            android:title="Port"
+            android:defaultValue="21"
+            android:autoText="true">
+    </EditTextPreference>
+    <EditTextPreference
+            android:key="ftp_username"
+            android:title="User">
+    </EditTextPreference>
+    <EditTextPreference
+            android:key="ftp_password"
+            android:title="Password">
+    </EditTextPreference>
+    <EditTextPreference
+            android:key="ftp_path"
+            android:title="Remote Path"
+            android:defaultValue="/">
+    </EditTextPreference>
+</PreferenceScreen>

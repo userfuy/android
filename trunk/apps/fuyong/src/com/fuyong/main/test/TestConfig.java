@@ -55,9 +55,9 @@ public class TestConfig {
         for (Iterator iter = root.elementIterator(); iter.hasNext(); ) {
             Element element = (Element) iter.next();
             if (element.getName().equals("voice")) {
-//                VoiceTest voiceTest = new VoiceTest();
-//                voiceTest.config(element);
-//                testList.add(voiceTest);
+                VoiceTest voiceTest = new VoiceTest();
+                voiceTest.config(element);
+                testList.add(voiceTest);
             } else if (element.getName().equals("web-browse")) {
                 WebBrowseTest webBrowseTest = new WebBrowseTest();
                 webBrowseTest.config(element);

@@ -4,6 +4,7 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="15"/>
+
     <permission android:name="com.fuyong.main.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
 
     <!-- Required -->
@@ -44,7 +45,10 @@
                 android:name=".SettingsActivity"
                 android:label="@string/settings">
         </activity>
-
+        <!--<service-->
+                <!--android:process="com.android.phone"-->
+                <!--android:name=".PhoneService">-->
+        <!--</service>-->
         <service android:name=".MainService">
             <intent-filter>
                 <action android:name="com.fuyong.main.MainService"/>

@@ -11,28 +11,22 @@
             android:text="Hello World, MainActivity"
             />
     <Button
-            android:id="@+id/start_ftp"
+            android:id="@+id/ftp_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="start ftp"/>
 
     <Button
-            android:id="@+id/stop_ftp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="stop ftp"/>
-
-    <Button
-            android:id="@+id/start_test"
+            android:id="@+id/test_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="start test"/>
 
     <Button
-            android:id="@+id/stop_test"
+            android:id="@+id/http_download_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="stop test"/>
+            android:text="start http download"/>
 
     <Button
             android:id="@+id/settings"

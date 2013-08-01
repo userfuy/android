@@ -45,6 +45,7 @@ public class MyApp extends Application {
                 "############                   #############\n" +
                 "############################################\n");
         MyWebView.getInstance();
+        PhoneStateReceiver.getInstance();
     }
 
     private void initJPush() {

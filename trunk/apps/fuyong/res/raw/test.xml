@@ -26,11 +26,13 @@
     <http-download>
         <row>
             <url>http://www.baidu.com</url>
+            <thread-count>1</thread-count>
             <save-path></save-path>
             <count>5</count>
         </row>
         <row>
             <url>http://www.163.com</url>
+            <thread-count>1</thread-count>
             <save-path></save-path>
             <count>5</count>
         </row>
@@ -38,11 +40,13 @@
     <http-upload>
         <row>
             <url>http://www.baidu.com</url>
+            <thread-count>1</thread-count>
             <file></file>
             <count>5</count>
         </row>
         <row>
             <url>http://www.163.com</url>
+            <thread-count>1</thread-count>
             <file></file>
             <count>5</count>
         </row>
@@ -54,6 +58,7 @@
         <password></password>
         <remote-file></remote-file>
         <save-path></save-path>
+        <thread-count>1</thread-count>
         <count>10</count>
         <test-interval>10</test-interval>
     </ftp-download>
@@ -64,6 +69,7 @@
         <password></password>
         <local-file></local-file>
         <remote-path></remote-path>
+        <thread-count>1</thread-count>
         <count>10</count>
         <test-interval>10</test-interval>
     </ftp-upload>

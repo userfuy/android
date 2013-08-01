@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="无线和网络设置">
+        <CheckBoxPreference android:key="apply_fly"
+                            android:summary="禁用所有无线连接" android:title="飞行模式">
+        </CheckBoxPreference>
+        <CheckBoxPreference android:key="apply_internet"
+                            android:summary="禁用通过USB共享Internet连接"
+                            android:title="Internet共享">
+        </CheckBoxPreference>
+        <CheckBoxPreference android:key="apply_wifi"
+                            android:summary="打开Wi-Fi" android:title="Wi-Fi">
+        </CheckBoxPreference>
+        <Preference android:summary="设置和管理无线接入点" android:title="Wi-Fi设置"
+                    android:dependency="apply_wifi" android:key="wifi_setting">
+        </Preference>
+        <CheckBoxPreference android:key="apply_bluetooth"
+                            android:summary="启用蓝牙" android:title="蓝牙">
+        </CheckBoxPreference>
+        <Preference android:summary="管理连接、设备设备名称和可检测性"
+                    android:title="蓝牙设置" android:dependency="apply_bluetooth"
+                    android:key="bluetooth_setting">
+        </Preference>
+        <EditTextPreference android:key="number_edit"
+                            android:title="输入电话号码">
+        </EditTextPreference>
+        <ListPreference android:title="部门设置" android:entries="@array/department"
+                        android:entryValues="@array/department_value"
+                        android:dialogTitle="选择部门"
+                        android:key="depart_value">
+        </ListPreference>
+        <RingtonePreference android:ringtoneType="all" android:title="玲聲"
+                            android:showDefault="true" android:key="ring_key"
+                            android:showSilent="true">
+        </RingtonePreference>
+    </PreferenceCategory>
+</PreferenceScreen>

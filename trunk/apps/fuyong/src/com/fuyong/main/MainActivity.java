@@ -14,60 +14,89 @@ import com.fuyong.main.test.MyWebView;
 import it.sauronsoftware.ftp4j.FTPClient;
 
 public class MainActivity extends BaseActivity {
-    private Button startFtpBtn;
-    private Button stopFtpBtn;
-    private Button startTestBtn;
-    private Button stopTestBtn;
+    private Button ftpBtn;
+    private boolean ftpStarted = false;
+    private Button testBtn;
+    private boolean testStarted = false;
+    private Button httpDownloadBtn;
+    private boolean httpStarted = false;
     private Button settingsBtn;
+
     private FTPClient ftpClient;
+    private LinearLayout linearLayout;
+    private HttpDownload httpDownload;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        startFtpBtn = (Button) findViewById(R.id.start_ftp);
-        startFtpBtn.setOnClickListener(new View.OnClickListener() {
+        ftpBtn = (Button) findViewById(R.id.ftp_btn);
+        ftpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread() {
-                    @Override
-                    public void run() {
-                        ftpClient = FTPUtil.makeFtpConnection("58.60.106.160", 21, "probe", "123");
-                        if (null == ftpClient) {
-                            return;
+                if (ftpStarted) {
+                    FTPUtil.abortDataTransfer(ftpClient, true);
+                } else {
+                    new Thread() {
+                        @Override
+                        public void run() {
+                            ftpClient = FTPUtil.makeFtpConnection("58.60.106.160", 21, "probe", "123");
+                            if (null == ftpClient) {
+                                return;
+                            }
+                            FTPUtil.upload(ftpClient, MyAppDirs.getAppRootDir() + "ftp/up.dat", "/up/fy", null);
+                            FTPUtil.closeConnection(ftpClient);
                         }
-                        FTPUtil.upload(ftpClient, MyAppDirs.getAppRootDir() + "ftp/up.dat", "/up/fy", null);
-                        FTPUtil.closeConnection(ftpClient);
-                    }
-                }.start();
-            }
-        });
-        stopFtpBtn = (Button) findViewById(R.id.stop_ftp);
-        stopFtpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                new Thread() {
-                    @Override
-                    public void run() {
-                        FTPUtil.abortDataTransfer(ftpClient, true);
-                    }
-                }.start();
+                    }.start();
+                }
+                ftpStarted = !ftpStarted;
+                if (ftpStarted) {
+                    ftpBtn.setText("stop ftp");
+                } else {
+                    ftpBtn.setText("start ftp");
+                }
             }
         });
 
-        startTestBtn = (Button) findViewById(R.id.start_test);
-        startTestBtn.setOnClickListener(new View.OnClickListener() {
+        testBtn = (Button) findViewById(R.id.test_btn);
+        testBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainservice.getTestManager().start(MyAppDirs.getConfigDir() + "test/test_default.xml");
+                if (testStarted) {
+                    mainservice.getTestManager().stop();
+                } else {
+                    mainservice.getTestManager().start(MyAppDirs.getConfigDir() + "test/test_default.xml");
+                }
+                testStarted = !testStarted;
+                if (testStarted) {
+                    testBtn.setText("stop test");
+                } else {
+                    testBtn.setText("start test");
+                }
             }
         });
-        stopTestBtn = (Button) findViewById(R.id.stop_test);
-        stopTestBtn.setOnClickListener(new View.OnClickListener() {
+        httpDownloadBtn = (Button) findViewById(R.id.http_download_btn);
+        httpDownloadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainservice.getTestManager().stop();
+                if (httpStarted) {
+                    httpDownload.stop();
+                } else {
+                    new Thread() {
+                        @Override
+                        public void run() {
+                            httpDownload = new HttpDownload("http://gdown.baidu.com/data/wisegame/c0fd884eec5df4e2/shenmiaotaowang2_115.apk", MyAppDirs.getAppRootDir() + "/down/", 4);
+//                            httpDownload = new HttpDownload(null, MyAppDirs.getAppRootDir() + "/down/", 4);
+                            httpDownload.download();
+                        }
+                    }.start();
+                }
+                httpStarted = !httpStarted;
+                if (httpStarted) {
+                    httpDownloadBtn.setText("stop http download");
+                } else {
+                    httpDownloadBtn.setText("start http download");
+                }
             }
         });
         settingsBtn = (Button) findViewById(R.id.settings);
@@ -77,7 +106,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             }
         });
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
+        linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
         linearLayout.addView(MyWebView.getInstance().getWebView());
     }
 
@@ -101,7 +130,6 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         ActivityManager.getInstance().destroyAllActivity();
-                        getApplication().onTerminate();
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -125,18 +153,20 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        linearLayout.removeView(MyWebView.getInstance().getWebView());
+        getApplication().onTerminate();
     }
 
     private void bindService() {
-        bindService(new Intent(this, MainService.class), sc, BIND_AUTO_CREATE);
+        bindService(new Intent(this, MainService.class), mainsc, BIND_AUTO_CREATE);
     }
 
     private void unBindService() {
-        unbindService(sc);
+        unbindService(mainsc);
     }
 
     private MainService mainservice;
-    ServiceConnection sc = new ServiceConnection() {
+    ServiceConnection mainsc = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             log.info("connected MainService");
@@ -147,6 +177,20 @@ public class MainActivity extends BaseActivity {
         public void onServiceDisconnected(ComponentName componentName) {
             log.info("disconnected MainService");
             mainservice = null;
+        }
+    };
+    private PhoneService phoneService;
+    ServiceConnection phonesc = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            log.info("connected PhoneService");
+            phoneService = ((PhoneService.MyBinder) iBinder).getService();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            log.info("disconnected PhoneService");
+            phoneService = null;
         }
     };
 }
