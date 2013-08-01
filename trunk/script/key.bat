@@ -1,0 +1,1 @@
+keytool -genkey -alias fuyong_android.keystore -keyalg RSA -validity 20000 -keystore fuyong_android.keystore
