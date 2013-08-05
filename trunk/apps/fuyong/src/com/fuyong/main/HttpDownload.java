@@ -50,7 +50,7 @@ public class HttpDownload {
         }
     }
 
-    public boolean download() {
+    public boolean download(boolean redownload) throws InterruptedException {
         log.info("begin download:" + url + ", thread count:" + threadCount);
         synchronized (stopFlag) {
             stopFlag = false;
@@ -60,7 +60,7 @@ public class HttpDownload {
             log.info("create local file failed:" + localPath + fileName);
             return false;
         }
-        if (!createDownloadCfg()) {
+        if (!createDownloadCfg(redownload)) {
             log.info("create download config failed");
             return false;
         }
@@ -107,8 +107,6 @@ public class HttpDownload {
             if (!executor.isTerminated()) {
                 executor.shutdownNow();
             }
-        } catch (InterruptedException e) {
-            Log.exception(e);
         } catch (FileNotFoundException e) {
             Log.exception(e);
         } catch (ExecutionException e) {
@@ -140,9 +138,17 @@ public class HttpDownload {
         synchronized (stopFlag) {
             stopFlag = true;
         }
+        for (DownloadTask task : downloadTasks) {
+            task.stop();
+        }
         if (null != executor) {
             executor.shutdownNow();
         }
+    }
+
+
+    public int getFileSize() {
+        return fileSize;
     }
 
     public int downloadSize() {
@@ -218,10 +224,14 @@ public class HttpDownload {
         }
     }
 
-    private boolean createDownloadCfg() {
+    private boolean createDownloadCfg(boolean redownload) {
         File downloadCfg = new File(getDownloadCfgPath());
         if (downloadCfg.exists()) {
-            return true;
+            if (redownload) {
+                downloadCfg.delete();
+            } else {
+                return true;
+            }
         }
         try {
             downloadCfg.createNewFile();
@@ -279,7 +289,7 @@ public class HttpDownload {
             // 下载配置文件记录的文件大小与新获取的不一致，新建下载配置
             if (fileSize != this.fileSize) {
                 cfg.delete();
-                createDownloadCfg();
+                createDownloadCfg(true);
                 return parseDownloadCfg();
             }
             threadCount = dataInputStream.readInt();
@@ -357,6 +367,7 @@ public class HttpDownload {
         private int start;
         private int block;
         private int download;
+        private HttpURLConnection http;
 
         public DownloadTask(int taskId, int start, int block, int offset) {
             this.taskId = taskId;
@@ -366,7 +377,7 @@ public class HttpDownload {
         }
 
         public boolean isDownloadSuc() {
-            return download == block;
+            return download >= block;
         }
 
         public int getTaskId() {
@@ -379,7 +390,6 @@ public class HttpDownload {
 
         @Override
         public DownloadTask call() {
-            HttpURLConnection http = null;
             http = httpConnect(HttpDownload.this.url, "GET");
             if (null == http) {
                 return this;
@@ -428,6 +438,12 @@ public class HttpDownload {
             }
 
             return this;
+        }
+
+        public void stop() {
+            if (null != http) {
+                http.disconnect();
+            }
         }
     }
 }

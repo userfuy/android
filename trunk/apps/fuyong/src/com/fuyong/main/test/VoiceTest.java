@@ -63,8 +63,8 @@ public class VoiceTest extends Test implements Observer {
             Log.exception(e);
         } finally {
             PhoneStateReceiver.getInstance().deleteObserver(this);
-            log.info("end voice test");
         }
+        log.info("end voice test");
         return null;
     }
 

@@ -87,7 +87,11 @@ public class MainActivity extends BaseActivity {
                         public void run() {
                             httpDownload = new HttpDownload("http://gdown.baidu.com/data/wisegame/c0fd884eec5df4e2/shenmiaotaowang2_115.apk", MyAppDirs.getAppRootDir() + "/down/", 4);
 //                            httpDownload = new HttpDownload(null, MyAppDirs.getAppRootDir() + "/down/", 4);
-                            httpDownload.download();
+                            try {
+                                httpDownload.download(false);
+                            } catch (InterruptedException e) {
+
+                            }
                         }
                     }.start();
                 }

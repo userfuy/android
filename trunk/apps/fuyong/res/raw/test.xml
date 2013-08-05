@@ -25,10 +25,10 @@
     </web-browse>
     <http-download>
         <row>
-            <url>http://www.baidu.com</url>
+            <url>http://gdown.baidu.com/data/wisegame/c0fd884eec5df4e2/shenmiaotaowang2_115.apk</url>
             <thread-count>1</thread-count>
             <save-path></save-path>
-            <count>5</count>
+            <count>1</count>
         </row>
         <row>
             <url>http://www.163.com</url>

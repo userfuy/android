@@ -19,7 +19,7 @@ public abstract class Test implements Callable<Object> {
     public abstract void config(Element element);
 
     protected String getStringValue(String value, String defaultValue) {
-        if (value.isEmpty()) {
+        if (null == value || value.isEmpty()) {
             return defaultValue;
         }
         return value;

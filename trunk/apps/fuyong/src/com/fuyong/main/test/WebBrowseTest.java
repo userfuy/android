@@ -62,9 +62,8 @@ public class WebBrowseTest extends Test {
             Log.exception(e);
         } catch (Exception e) {
             Log.exception(e);
-        } finally {
-            log.info("end web brows test");
         }
+        log.info("end web brows test");
         return null;
     }
 
